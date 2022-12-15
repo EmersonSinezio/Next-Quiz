@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;800&family=Prompt:wght@200;400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -23,6 +23,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.main h1, .main p, .finish h1 {
+  font-family: "Prompt", sans-serif;
+  font-size: 2rem;
 }
 
 .button {
@@ -66,6 +71,7 @@
   color: #ccc;
   cursor: pointer;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+  font-family: "Prompt", sans-serif;
 }
 
 @-webkit-keyframes incorrect {

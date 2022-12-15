@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .container {
@@ -27,16 +27,16 @@
 
 .button {
   margin-top: 4vh;
-  padding: .8rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 1.2rem;
   border: 1px solid gray;
-  background: linear-gradient(90deg, #56ccf2 0%, #2f80ed 100%);
+  background: #2f80ed;
   cursor: pointer;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
-
 .button:hover {
-  background: linear-gradient(90deg, #2f80ed 0%, #56ccf2 100%);
-  transition: .5s;
+  background: transparent;
+  transition: 0.5s;
 }
 
 .questions {
@@ -68,7 +68,7 @@
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
 }
 
-@keyframes incorrect {
+@-webkit-keyframes incorrect {
   0% {
     transform: translateX(-20px);
   }
@@ -80,6 +80,28 @@
   }
 }
 
+@keyframes incorrect {
+  0% {
+    transform: translateX(-20px);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes correct {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 @keyframes correct {
   0% {
     transform: translateY(-10px);
@@ -91,18 +113,34 @@
     transform: translateY(0);
   }
 }
-
 #optionCorrect {
   background-color: green;
-  animation: correct .8s;
+  -webkit-animation: correct 0.8s;
+          animation: correct 0.8s;
 }
 
 #optionIncorrect {
   background-color: red;
-  animation: incorrect .5s;
+  -webkit-animation: incorrect 0.5s;
+          animation: incorrect 0.5s;
 }
 
 .image {
-  width: 40vw;
-  height: 70vh;
+  width: 50vw;
+  height: 50vh;
 }
+
+@media (max-width: 800px) {
+  .image {
+    width: 100vw;
+    height: 50vh;
+  }
+  .questions {
+    font-size: 1.5rem;
+    width: 70%;
+  }
+  .options {
+    width: 70%;
+    height: 5vh;
+  }
+}/*# sourceMappingURL=globals.css.map */

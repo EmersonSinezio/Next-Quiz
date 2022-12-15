@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;800&display=swap');
-$colorRGB: linear-gradient(90deg, #56ccf2 0%, #2f80ed 100%);
-$colorRGBI: linear-gradient(90deg, #2f80ed 0%, #56ccf2 100%);
+$colorButton:#2f80ed;
 $colorBackground: linear-gradient(90deg, #a1c4fd 0%, #c2e9fb 100%);
 $questions: #ccc;
 $options: #333;
@@ -36,12 +35,12 @@ $options: #333;
     padding: .8rem 1.5rem;
     border-radius: 1.2rem;
     border: 1px solid gray;
-    background: $colorRGB;
+    background: $colorButton;
     cursor: pointer;
-
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
     &:hover {
-        background: $colorRGBI;
-        transition: .5s;
+        background: transparent;
+        transition: .5s;        
     }
 }
 
@@ -113,6 +112,23 @@ $options: #333;
 }
 
 .image {
-    width: 40vw;
-    height: 70vh;
+    width: 50vw;
+    height: 50vh;
+}
+
+@media(max-width:800px) {
+    .image {
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .questions {
+        font-size: 1.5rem;
+        width: 70%;
+    }
+
+    .options {
+        width: 70%;
+        height: 5vh;
+    }
 }

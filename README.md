@@ -15,7 +15,7 @@ Projeto inspirado em um Quiz
 As tecs utilizadas para realizar o projeto:
 
 - Next-js
-- Next-Link
+- Next-Router
 - Sass
 
 ## Serviços usados:
